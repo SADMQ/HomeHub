@@ -23,21 +23,23 @@ HomeHub/
 │   ├── app/
 │   │   └── telemetry_logger.py          # tracked
 │   ├── certs/
-│   │   ├── generate_certs.sh            # tracked
 │   │   ├── ca.crt                       # not in GitHub
 │   │   ├── ca.key                       # not in GitHub (private key!)
+│   │   ├── ca.srl                       # not in GitHub
+│   │   ├── generate_certs.sh            # tracked
+│   │   ├── README.md                    # tracked
 │   │   ├── server.crt                   # not in GitHub
 │   │   ├── server.key                   # not in GitHub (private key!)
-│   │   ├── server.csr                   # not in GitHub
-│   │   └── ca.srl                       # not in GitHub
+│   │   └──server.csr                    # not in GitHub
+│   ├── cleanup.sh                       # tracked
 │   ├── init_db.sh                       # tracked
-│   └── mqtt_setup/
-│       └── mosquitto_conf_example.conf  # tracked
+│   ├── mqtt_setup/
+│   │   └── mosquitto_conf_example.conf  # tracked
+│   └── sensor_data.db                   # not in GitHub
 ├── scripts/
 │   ├── publish_test.sh                  # tracked
 │   └── subscribe_test.sh                # tracked
-├── cleanup.sh                           # tracked
-├── sensor_data.db                       # not in GitHub
+│── README.md                            # tracked
 ├── requirements.txt                     # tracked
 └── .env.example                         # tracked (your .env should not be committed)
 ```
@@ -158,6 +160,7 @@ sudo systemctl restart mosquitto
 ---
 ## Initialize SQLite Database
 ```bash
+cd raspberry_pi
 ./init_db.sh
 ```
 This creates `sensor_data.db` with a `telemetry` table containing:
