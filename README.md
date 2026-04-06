@@ -136,7 +136,6 @@ listener 8883
 allow_anonymous false
 password_file /etc/mosquitto/passwd
 
-cafile /etc/mosquitto/certs/ca.crt
 certfile /etc/mosquitto/certs/server.crt
 keyfile /etc/mosquitto/certs/server.key
 ```
