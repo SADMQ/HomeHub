@@ -96,6 +96,7 @@ MQTT_PW=your_password
 MQTT_TOPIC=sensors/#
 CA_CERT_PATH=your_path
 DB_PATH=raspberry_pi/sensor_data.db
+THINGSBOARD_TOKEN=your_token
 ```
 ---
 ## TLS Certificate Generation
@@ -135,7 +136,6 @@ listener 8883
 allow_anonymous false
 password_file /etc/mosquitto/passwd
 
-cafile /etc/mosquitto/certs/ca.crt
 certfile /etc/mosquitto/certs/server.crt
 keyfile /etc/mosquitto/certs/server.key
 ```
@@ -186,6 +186,7 @@ This script will:
 - Subscribe to `sensors/#` topics  
 - Save incoming messages to the database  
 - Print received values to the terminal
+- Forward saved messages to thingsboard
 
 Keep this terminal open while the logger runs.
 
