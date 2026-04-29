@@ -88,6 +88,9 @@ deactivate
 cp .env.example .env
 ```
 2. Fill in your own MQTT credentials and paths in `.env`:
+```bash   
+vim .env
+```
 ```bash
 MQTT_BROKER=localhost
 MQTT_PORT=8883
