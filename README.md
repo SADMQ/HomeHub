@@ -249,7 +249,7 @@ To keep the SQLite database from growing indefinitely, a cleanup script is inclu
 
 ### 1. Make it executable:
 ```bash
-chmod +x cleanup.sh
+chmod +x raspberry_pi/cleanup.sh
 ```
 ### 2. Schedule with cron (runs daily at 3 AM):
 ```bash
@@ -257,7 +257,7 @@ crontab -e
 ```
 ### 3. Add the following line at the end:
 ```bash
-0 3 * * * /home/dev/HomeHub/cleanup.sh
+0 3 * * * /home/dev/HomeHub/raspberry_pi/cleanup.sh
 ```
 ---
 ## Notes
