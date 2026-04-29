@@ -7,11 +7,11 @@ It handles **data storage** from **MQTT** messages, saving them locally to **SQL
 
 ## Project Overview
 
-1. ESP32 sends sensor data to the Raspberry Pi Zero via MQTT.  
+1. Arduino sends sensor data to the Raspberry Pi Zero via MQTT.  
 2. Python program receives the data.  
 3. The Python program:
    - Saves the data locally in `sensor_data.db` (backup in case of internet loss)  
-   - Sends data to ThingsBoard over the internet *(not yet implemented)*
+   - Sends data to ThingsBoard over the internet
 
 ---
 ## Project Structure
