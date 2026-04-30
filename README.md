@@ -260,7 +260,7 @@ crontab -e
 Make sure the path `/home/dev/HomeHub/raspberry_pi/cleanup.sh` matches your installation directory.
 
 ```bash
-0 3 * * * /home/dev/HomeHub/raspberry_pi/cleanup.sh
+0 3 * * * /bin/bash /home/dev/HomeHub/raspberry_pi/cleanup.sh >> /home/dev/HomeHub/cleanup.log 2>&1
 ```
 ---
 ## Debug & Monitoring Commands
