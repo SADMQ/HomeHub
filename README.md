@@ -199,7 +199,7 @@ WorkingDirectory=/home/dev/HomeHub
 
 EnvironmentFile=/home/dev/HomeHub/.env
 
-ExecStart=/home/dev/HomeHub/venv/bin/python /home/dev/HomeHub/raspberry_pi/app/telemetry_logger.py
+ExecStart=/home/dev/HomeHub/venv/bin/python -u /home/dev/HomeHub/raspberry_pi/app/telemetry_logger.py
 
 Restart=always
 RestartSec=5
@@ -298,6 +298,10 @@ mosquitto_sub -h rpi-001.local -p 8883 \
    - topic structure
    - payload values
    - connection stability
+### 4. Live logs from the service (MQTT connection, database writes, and cloud sync status)
+```bash
+journalctl -u homehub.service -f
+```
 ## Notes
 
 - Data Format
